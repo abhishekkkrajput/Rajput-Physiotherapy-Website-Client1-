@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop')`,
@@ -23,25 +23,25 @@ const Hero: React.FC = () => {
             <span className="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
             <span className="text-teal-700 text-sm font-medium">Trusted by 5,000+ Patients in Agra</span>
           </div>
-          
+
           <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
             Advanced <span className="text-teal-600">Physiotherapy</span> & Pain Relief.
           </h1>
-          
+
           <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
             Reclaim your movement and live life without limits. Personalized treatment across 3 premium locations in Agra.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="#centers" 
+            <a
+              href="#centers"
               className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-teal-200/50 transition-all flex items-center justify-center gap-2 group"
             >
               Find a Branch
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               className="px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-200 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2"
             >
               Our Services
@@ -51,10 +51,10 @@ const Hero: React.FC = () => {
           <div className="mt-12 flex items-center gap-6">
             <div className="flex -space-x-2">
               {[1, 2, 3, 4].map((i) => (
-                <img 
+                <img
                   key={i}
-                  src={`https://picsum.photos/seed/${i}/40/40`} 
-                  alt="Patient" 
+                  src={`https://picsum.photos/seed/${i}/40/40`}
+                  alt="Patient"
                   className="w-10 h-10 rounded-full border-2 border-white"
                 />
               ))}
@@ -71,14 +71,14 @@ const Hero: React.FC = () => {
 
       {/* Quick location cards - bottom bar desktop only */}
       <div className="hidden lg:flex absolute bottom-0 right-0 p-8 z-20 space-x-4">
-         <div className="bg-white/80 backdrop-blur p-4 rounded-t-xl border-t border-x border-slate-100 shadow-lg min-w-[200px]">
-            <h4 className="font-bold text-teal-700 text-sm mb-1 uppercase tracking-wider">Now Open</h4>
-            <p className="text-slate-900 font-semibold">Rajput Center</p>
-         </div>
-         <div className="bg-white/80 backdrop-blur p-4 rounded-t-xl border-t border-x border-slate-100 shadow-lg min-w-[200px]">
-            <h4 className="font-bold text-teal-700 text-sm mb-1 uppercase tracking-wider">Expertise</h4>
-            <p className="text-slate-900 font-semibold">Neuro & Ortho</p>
-         </div>
+        <div className="bg-white/80 backdrop-blur p-4 rounded-t-xl border-t border-x border-slate-100 shadow-lg min-w-[200px]">
+          <h4 className="font-bold text-teal-700 text-sm mb-1 uppercase tracking-wider">Now Open</h4>
+          <p className="text-slate-900 font-semibold">Rajput Center</p>
+        </div>
+        <div className="bg-white/80 backdrop-blur p-4 rounded-t-xl border-t border-x border-slate-100 shadow-lg min-w-[200px]">
+          <h4 className="font-bold text-teal-700 text-sm mb-1 uppercase tracking-wider">Expertise</h4>
+          <p className="text-slate-900 font-semibold">Neuro & Ortho</p>
+        </div>
       </div>
     </div>
   );

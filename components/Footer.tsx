@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span className="text-white text-xl font-bold tracking-tight">Agra Physio Group</span>
+              <span className="text-white text-xl font-bold tracking-tight">Rajput Physiotherapy Group</span>
             </div>
             <p className="text-slate-400 mb-8 leading-relaxed">
               Agra's most trusted physiotherapy network with 15+ years of excellence in neuro, ortho, and sports rehabilitation.
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
 
         <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-sm">
-            © {currentYear} Agra Physiotherapy Group. All rights reserved.
+            © {currentYear} Rajput Physiotherapy Group. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

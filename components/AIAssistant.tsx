@@ -30,7 +30,7 @@ const AIAssistant: React.FC = () => {
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
-        contents: `You are an AI medical assistant for the "Agra Physio Group", a premier physiotherapy clinic in Agra, India. 
+        contents: `You are an AI medical assistant for the "Rajput Physiotherapy Group", a premier physiotherapy clinic in Agra, India. 
         Your goal is to briefly answer health-related questions and suggest suitable physiotherapy services we offer. 
         ALWAYS state that you are an AI and not a doctor.
         The clinics are located at:
@@ -41,7 +41,7 @@ const AIAssistant: React.FC = () => {
         Keep answers empathetic, clinical, and helpful. Suggest booking an appointment for a physical assessment.
         User question: ${userMessage}`,
         config: {
-          systemInstruction: "You are a friendly medical concierge for Agra Physio Group. Be professional and concise."
+          systemInstruction: "You are a friendly medical concierge for Rajput Physiotherapy Group. Be professional and concise."
         }
       });
 
@@ -59,7 +59,7 @@ const AIAssistant: React.FC = () => {
   return (
     <div className="relative">
       {/* Trigger Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="bg-teal-600 text-white p-4 rounded-full shadow-lg hover:shadow-teal-200/50 transition-all hover:scale-110 flex items-center justify-center group"
       >
@@ -97,14 +97,13 @@ const AIAssistant: React.FC = () => {
                 <p className="text-slate-500 text-xs">Ask about symptoms, branch locations, or specific physiotherapy treatments.</p>
               </div>
             )}
-            
+
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${
-                  msg.role === 'user' 
-                    ? 'bg-teal-600 text-white rounded-tr-none' 
+                <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${msg.role === 'user'
+                    ? 'bg-teal-600 text-white rounded-tr-none'
                     : 'bg-white text-slate-700 shadow-sm border border-slate-100 rounded-tl-none'
-                }`}>
+                  }`}>
                   {msg.content}
                 </div>
               </div>
@@ -121,15 +120,15 @@ const AIAssistant: React.FC = () => {
 
           <div className="p-4 bg-white border-t border-slate-100">
             <div className="relative">
-              <input 
+              <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                type="text" 
+                type="text"
                 placeholder="Type your question..."
                 className="w-full pl-4 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500/20 text-sm"
               />
-              <button 
+              <button
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
                 className="absolute right-2 top-2 p-1.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50"
